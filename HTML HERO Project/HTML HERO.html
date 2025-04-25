@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Hero - Learn HTML for Free</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">HTML Hero</h1>
+    <ul class="flex space-x-6">
+      <li><a href="#lessons" class="hover:text-blue-600">Lessons</a></li>
+      <li><a href="#editor" class="hover:text-blue-600">Editor</a></li>
+      <li><a href="#quiz" class="hover:text-blue-600">Quiz</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 bg-blue-50">
+    <h2 class="text-4xl font-bold mb-4">Master HTML the Easy Way</h2>
+    <p class="text-lg mb-6">Start from scratch. Practice with live code. Learn by doing!</p>
+    <a href="#lessons" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Get Started</a>
+  </section>
+
+  <!-- Lessons Section -->
+  <section id="lessons" class="py-12 px-6">
+    <h3 class="text-3xl font-semibold mb-6 text-center">📘 HTML Lessons</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white shadow-md p-4 rounded-lg">
+        <h4 class="text-xl font-bold">Lesson 1: Basic Tags</h4>
+        <p>Learn about headings, paragraphs, and more.</p>
+      </div>
+      <div class="bg-white shadow-md p-4 rounded-lg">
+        <h4 class="text-xl font-bold">Lesson 2: Links & Images</h4>
+        <p>Understand how to add hyperlinks and images.</p>
+      </div>
+      <div class="bg-white shadow-md p-4 rounded-lg">
+        <h4 class="text-xl font-bold">Lesson 3: Forms</h4>
+        <p>Create interactive forms using HTML.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Editor -->
+  <section id="editor" class="py-12 px-6 bg-gray-200">
+    <h3 class="text-3xl font-semibold mb-6 text-center">🧪 Try It Yourself</h3>
+    <div class="flex flex-col md:flex-row gap-4">
+      <textarea id="htmlCode" class="w-full md:w-1/2 h-64 p-4 rounded" placeholder="Type your HTML code here..."></textarea>
+      <iframe id="preview" class="w-full md:w-1/2 h-64 bg-white border rounded"></iframe>
+    </div>
+    <button onclick="runCode()" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Run Code</button>
+  </section>
+
+  <!-- Quiz Section -->
+  <section id="quiz" class="py-12 px-6">
+    <h3 class="text-3xl font-semibold mb-6 text-center">🎯 HTML Quiz</h3>
+    <p class="text-center mb-4">Test your skills and earn badges!</p>
+    <div class="text-center">
+      <button class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">Start Quiz</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white text-center py-4 mt-12 shadow-inner">
+    <p>&copy; 2025 HTML Hero. Built with ❤️ to help you learn.</p>
+  </footer>
+
+  <!-- Live Code Preview Script -->
+  <script>
+    function runCode() {
+      const html = document.getElementById('htmlCode').value;
+      document.getElementById('preview').srcdoc = html;
+    }
+  </script>
+
+</body>
+</html>
